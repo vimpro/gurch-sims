@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous Variable Transmission Simulation</title>
+
+    <script src="script.js" defer></script>
+    
+    <style>
+        body {
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        section {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+<body style="background-color: #222; color: white;">
+    <h1>
+        Continuous Variable Transmission Simulation
+    </h1>
+
+    <section>
+
+        <canvas id="diagram" width="800" height="800" style="background-color:#555;;"></canvas>
+        
+       
+        <div>
+            <div>
+                <label for="p1_width">Pulley 1 Width:</label>
+                <p id="p1_width">0</p>
+                <input type="range" id="p1_width_select" min="0" max="50" step="0.01">
+            </div>
+
+            <br>
+            
+            <div>
+                <span>Pulley 2 Width:</span>
+                <span id="p2_width">0</span>
+            </div>
+
+            <br>
+            
+            <div>
+                <span>Gear Ratio:</span>
+                <span id="ratio">1:1</span>
+            </div>
+        </div>
+            
+    </section>
+    <section>
+        <p>
+            CVTs allow cars to have infinitely many gear configurations, because they don't actually use gears and instead look something like the configuration above.
+            It is basically two variable pulleys each consisting of two opposing cones. In this case the top pulley is connected to the engine (constant rpm)
+            and the bottom pulley is connected to the drivetrain. Notice that to keep tension (and thus torque on each pulley) the belt must remain at a constant
+            length. Because of that both pulleys have to be variable and have to switch ratios accordingly to keep the belt tensioned. This is how I derived the relationship
+            between pulley widths to keep the belt tension constant. And here is a desmos link: <a href="https://www.desmos.com/calculator/rjcs07qomy" target="_blank">https://www.desmos.com/calculator/rjcs07qomy</a>
+        </p>
+
+        <img src="math1.jpg" alt="Math" style="width: 800px;">
+    </section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer src="main.js"></script>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="800" height="800"></canvas>
+
+    <form id="spawnform" action="javascript:spawnObject()">
+        <input type="number" name="x" placeholder="x">
+        <input type="number" name="y" placeholder="y">
+        <input type="number" name="vx" placeholder="vx">
+        <input type="number" name="vy" placeholder="vy">
+        <input type="color" name="color" id="colorpicker">
+        <input type="number" name="size" placeholder="size">
+        <input type="submit" value="Spawn">
+    </form>
+</body>
+</html>
